@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">artistpizza</string>
+    <string name="members_route">/members</string>
+    <string name="title_activity_rollbook">RollbookActivity</string>
+</resources>
