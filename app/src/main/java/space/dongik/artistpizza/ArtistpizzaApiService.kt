@@ -12,6 +12,12 @@ interface ArtistpizzaApiService {
     @GET("members")
     fun get_members(): Observable<Array<Member>>
 
+    @GET("members")
+    fun get_member(@Query("member_id")memberId:String): Observable<Member>
+
+    @GET("ask/{pin}")
+    fun ask(@Path("pin")memberId: String): Observable<AskResult>
+
     @POST("members")
     fun add_member(@Body member:Member):Observable<Member>
 
@@ -19,18 +25,18 @@ interface ArtistpizzaApiService {
     fun edit_member(@Body member:Member):Observable<Member>
 
 
-    @GET("rollbook/{time}")
-    fun get_rollbook(@Path("time")time: String):Observable<Rollbook>
-
-    @POST("rollbook/{time}")
-    fun add_rollbook(@Path("time")time: String, @Body rollbook:Rollbook): Observable<Rollbook>
-
-    @PUT("rollbook/{time}")
-    fun edit_rollbook(@Path("time")time: String, @Body rollbook:Rollbook):Observable<Rollbook>
+//    @GET("rollbook/{time}")
+//    fun get_rollbook(@Path("time")time: String):Observable<Rollbook>
+//
+//    @POST("rollbook/{time}")
+//    fun add_rollbook(@Path("time")time: String, @Body rollbook:Rollbook): Observable<Rollbook>
+//
+//    @PUT("rollbook/{time}")
+//    fun edit_rollbook(@Path("time")time: String, @Body rollbook:Rollbook):Observable<Rollbook>
 
 
     @POST("attend")
-    fun attend(@Body attendRequest:AttendRequest):Observable<AttendResult>
+    fun attend(@Body attendRequest:AttendRequest):Observable<AttendRequestResult>
     /**
      * Companion object to create the GithubApiService
      */

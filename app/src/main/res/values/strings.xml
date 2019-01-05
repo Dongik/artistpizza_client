@@ -2,4 +2,6 @@
     <string name="app_name">artistpizza</string>
     <string name="members_route">/members</string>
     <string name="title_activity_rollbook">RollbookActivity</string>
+    <string name="attend">출석</string>
+    <string name="check">확인</string>
 </resources>
